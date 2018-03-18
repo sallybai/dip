@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>iScroll demo: simple</title>
+<link rel="stylesheet" type="text/css" href="css/chats.css">
+<script type="text/javascript" src="js/iscroll/iscroll.js"></script>
+<script type="text/javascript" src="js/iscroll/demoUtils.js"></script>
+<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true });
+
+	document.getElementById('me').addEventListener('tap', function () {
+		this.style.background = !this.style.background ? '#dbdbde' : '';
+	}, false);
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+	capture: false,
+	passive: false
+} : false);
+
+</script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body onload="loaded()">
+<div id="header">
+	<div class="topbar-wrap">
+		<h3>WeChat(3049)</h3>
+		<a href="#none"><span><!--add more--></span></a>
+	</div>
+</div>
+
+<div id="wrapper">
+	<div id="scroller">
+			<div class="input-wrap">
+				<input class="search-input" type="text" name="search" placeholder="search">
+			</div>
+		<ul class="contact">
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="img/index/1.jpg" /></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">11:58 AM</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="/img/index/2.jpg"></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">10:58 AM</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="img/index/1.jpg" /></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">7:58 AM</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li id="me">
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="/img/index/2.jpg"></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="img/index/1.jpg" /></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="/img/index/2.jpg"></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="img/index/1.jpg" /></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="/img/index/2.jpg"></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="/img/index/2.jpg"></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="img/index/1.jpg" /></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="/img/index/2.jpg"></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="/img/index/2.jpg"></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="img/index/1.jpg" /></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+			<li>
+				<div class="avatar"><img width="100%" height="auto" alt="头像" src="/img/index/2.jpg"></div>
+				<div class="text"><h3>CCAA China</h3><span class="time">16/3/2018</span><p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p></div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div id="footer">
+	
+</div>
+
+</body>
+</html>
