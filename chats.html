@@ -11,16 +11,17 @@
 	<script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
 	<script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
 	<script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
+	<script type="text/javascript" src="/js/global.js"></script>
 	<script type="text/javascript">
 
 		var myScroll;
 
 		function loaded() {
-			myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true });
+			myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true , click: true});
 
-			document.getElementById('me').addEventListener('tap', function () {
+			/*document.getElementById('me').addEventListener('tap', function () {
 				this.style.background = !this.style.background ? '#dbdbde' : '';
-			}, false);
+			}, false);*/
 		}
 
 		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
@@ -83,6 +84,24 @@
 					</a>
 				</div>
 			</div> -->
+			<!-- <h1>Phrase matcher</h1>
+			<p>Press the button then say the phrase to test the recognition.</p>
+		 -->
+			<!-- <div>
+				<p class="phrase">Phrase...</p>
+				<p class="result">Right or wrong?</p>
+				<p class="output">...diagnostic messages</p>
+			</div> -->
+		
+		
+			<div id="switch" class="weui-cells weui-cells_form">
+				<div class="weui-cell weui-cell_switch">
+					<div class="weui-cell__bd">Open Elderly Mode </div>
+					<div class="weui-cell__ft">
+						<input class="weui-switch" type="checkbox">
+					</div>
+				</div>
+			</div>
 			<ul class="contact">
 				<li>
 					<div class="avatar">
@@ -277,6 +296,7 @@
 			});
 		});
 	</script>
+	<script type="text/javascript" src="/js/speech/script.js"></script>
 </body>
 
 </html>

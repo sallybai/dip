@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>WeChat H5</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/weui.min.css">
+    <script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
+    <script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript">
+
+        var myScroll;
+
+        function loaded() {
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true ,click: true});
+
+            /*  document.getElementById('me').addEventListener('tap', function () {
+                 this.style.background = !this.style.background ? '#dbdbde' : '';
+             }, false); */
+        }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+            capture: false,
+            passive: false
+        } : false);
+
+    </script>
+</head>
+
+<body onload="loaded()" class="addacard1">
+    <div id="header">
+        <div class="topbar-wrap flex-pack-justify">
+            <a class="return" href="/me/wallet1.html">
+                <span>
+                    <!--add more-->Back
+                </span>
+            </a>
+            <h3>Cards</h3>
+        </div>
+
+    </div>
+
+    <div id="wrapper">
+        <div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">Name</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入qq号">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_vcode">
+                    <div class="weui-cell__hd"><label class="weui-label">Card No.</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="number" placeholder="请输入验证码">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <img class="weui-vcode-img" src="./images/vcode.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="weui-footer">
+            <p class="weui-footer__links">
+                <a href="javascript:void(0);" class="weui-footer__link">FAQ</a>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" class="searchbar js_show">
+
+    </script>
+</body>
+
+</html>

@@ -16,7 +16,7 @@
         var myScroll;
 
         function loaded() {
-            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true });
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: true });
 
             /*  document.getElementById('me').addEventListener('tap', function () {
                  this.style.background = !this.style.background ? '#dbdbde' : '';
@@ -55,19 +55,43 @@
                     <div class="weui-grid__icon">
                         <img src="/img/me/wallet/ico_1.png" alt="">
                     </div>
-                    <p class="weui-grid__label">Money<br /><span class="gray">&nbsp;</span></p>
+                    <p class="weui-grid__label">Money
+                        <br />
+                        <span class="gray">&nbsp;</span>
+                    </p>
                 </a>
                 <a href="javascript:;" class="weui-grid">
                     <div class="weui-grid__icon">
                         <img src="/img/me/wallet/ico_2.png" alt="">
                     </div>
-                    <p class="weui-grid__label">Balance<br /><span class="gray-light">¥66.60</span></p>
+                    <p class="weui-grid__label">Balance
+                        <br />
+                        <span class="gray-light">¥66.60</span>
+                    </p>
                 </a>
-                <a href="javascript:;" class="weui-grid">
+                <a href="/me/me_cards/cards1.html" class="weui-grid">
                     <div class="weui-grid__icon">
                         <img src="/img/me/wallet/ico_3.png" alt="">
                     </div>
-                    <p class="weui-grid__label">Cards<br /><span class="gray">&nbsp;</span></p>
+                    <p class="weui-grid__label">Cards
+                        <br />
+                        <span class="gray">&nbsp;</span>
+                    </p>
+                </a>
+            </div>
+            <div class="weui-cells__title">Most Frequently Used</div>
+            <div class="weui-grids">
+                <a href="javascript:;" class="weui-grid">
+                    <div class="weui-grid__icon">
+                        <img src="/img/me/wallet/ico9.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">Utitlities</p>
+                </a>
+                <a href="javascript:;" class="weui-grid">
+                    <div class="weui-grid__icon">
+                        <img src="/img/me/wallet/ico4.png" alt="">
+                    </div>
+                    <p class="weui-grid__label">Flight Tickets</p>
                 </a>
             </div>
             <div class="weui-cells__title">Powered by Tencent</div>
@@ -163,13 +187,13 @@
                     <div class="weui-grid__icon">
                         <img src="/img/me/wallet/ico13.png" alt="">
                     </div>
-                    <p class="weui-grid__label">Women's Style</p>
+                    <p class="weui-grid__label">Women Style</p>
                 </a>
                 <a href="javascript:;" class="weui-grid">
                     <div class="weui-grid__icon">
                         <img src="/img/me/wallet/ico18.png" alt="">
                     </div>
-                    <p class="weui-grid__label">Home Services</p>
+                    <p class="weui-grid__label">Home Service</p>
                 </a>
                 <a href="javascript:;" class="weui-grid">
                     <div class="weui-grid__icon">

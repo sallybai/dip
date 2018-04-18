@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>WeChat H5</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/weui.min.css">
+    <script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
+    <script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript">
+
+        var myScroll;
+
+        function loaded() {
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: true });
+
+            /*  document.getElementById('me').addEventListener('tap', function () {
+                 this.style.background = !this.style.background ? '#dbdbde' : '';
+             }, false); */
+        }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+            capture: false,
+            passive: false
+        } : false);
+
+    </script>
+</head>
+
+<body onload="loaded()" class="text-size">
+    <div id="header">
+        <div class="topbar-wrap flex-pack-justify">
+            <a class="return" href="/me/wallet1.html">
+                <span>
+                    <!--add more-->Back
+                </span>
+            </a>
+            <h3>Text Size</h3>
+        </div>
+
+    </div>
+
+    <div id="wrapper">
+        <div>
+            <div class="weui-cells">
+                <div class="weui-cell right">
+                    <div class="weui-cell__bd">
+                        <p>Preview text size</p>
+                    </div>
+                    <div class="weui-cell__hd" style="position: relative;margin-left: 1rem;">
+                        <img src="/img/me/setting/chat.png" style="width: 4rem;display: block">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd" style="position: relative;margin-right: 1rem;">
+                        <img src="/img/me/setting/chat.png" style="width: 4rem;display: block">
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p>Drag the block to change text size</p>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd" style="position: relative;margin-right: 1rem;">
+                        <img src="/img/me/setting/chat.png" style="width: 4rem;display: block">
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p>Text size in chats, menus and Moments will also change after suggestions, feedback to WeChat Team.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="weui-flex">
+            <div>
+                <div class="placeholder small">A</div>
+            </div>
+            <div class="weui-flex__item">
+                <div class="placeholder">Standard</div>
+            </div>
+            <div>
+                <div class="placeholder big">A</div>
+            </div>
+        </div>
+        <div class="weui-slider-box">
+            <div class="weui-slider">
+                <div id="sliderInner" class="weui-slider__inner">
+                    <div id="sliderTrack" style="width: 25%;" class="weui-slider__track"></div>
+                    <div id="sliderHandler" style="left: 25%;" class="weui-slider__handler"></div>
+                </div>
+            </div>
+            <!-- <div id="sliderValue" class="weui-slider-box__value">46</div> -->
+        </div>
+    </div>
+    <script type="text/javascript" class="searchbar js_show">
+
+        $(function () {
+            var $sliderTrack = $('#sliderTrack'),
+                $sliderHandler = $('#sliderHandler'),
+                $sliderValue = $('#sliderValue');
+
+            var totalLen = $('#sliderInner').width(),
+                startLeft = 0,
+                startX = 0;
+
+            var elem = $('html')
+            var html_size = elem.css('font-size').substring(0,2);
+            $sliderHandler
+                .on('touchstart', function (e) {
+                    startLeft = parseInt($sliderHandler.css('left')) * totalLen / 100;
+                    startX = e.changedTouches[0].clientX;
+                })
+                .on('touchmove', function (e) {
+                    var dist = startLeft + e.changedTouches[0].clientX - startX,
+                        percent;
+                    dist = dist < 0 ? 0 : dist > totalLen ? totalLen : dist;
+                    percent = parseInt(dist / totalLen * 100);
+                    $sliderTrack.css('width', percent + '%');
+                    $sliderHandler.css('left', percent + '%');
+                    $sliderValue.text(percent);
+                    e.preventDefault();
+                    // set font-size
+                    var font_size = 1 + percent / 100;
+                    elem.css({ fontSize: font_size* html_size +'px'})
+                });
+
+
+        });
+    </script>
+</body>
+
+</html>
