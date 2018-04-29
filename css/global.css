@@ -1065,7 +1065,8 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 ------------------------------ */
 .btn-speech{width: 6rem;height: 6rem;background: #fff;position: absolute;z-index: 9999;border-radius: 3rem;right: 0;border: 3px solid #eee;}
 
-
-
+/*  help_detail.html
+------------------------------- */
+.help-detail #footer{height: 0;} 
 
 

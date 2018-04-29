@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>WeChat H5</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/weui.min.css">
+    <script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
+    <script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript">
+
+        var myScroll;
+
+        function loaded() {
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: true });
+
+            /*  document.getElementById('me').addEventListener('tap', function () {
+                 this.style.background = !this.style.background ? '#dbdbde' : '';
+             }, false); */
+        }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+            capture: false,
+            passive: false
+        } : false);
+
+    </script>
+</head>
+
+<body class="help-center">
+    <div id="header">
+        <div class="topbar-wrap flex-pack-justify">
+            <a id="return" class="return" href="javascript:;">
+                <span>
+                    <!--add more-->Back
+                </span>
+            </a>
+            <h3>Help Center</h3>
+        </div>
+
+        <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="Search" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>Search</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">Cancel</a>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div>
+            <div class="weui-cells">
+                <a id="detail" class="weui-cell" href="javascript:;">
+                    <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                        <img src="/img/me/ico1.png" style="width: 50px;display: block">
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p>Bind / Unbind Bank Card</p>
+                        <p style="font-size: 13px;color: #888888;">2:22 mins</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript" class="searchbar js_show">
+
+        $(function () {
+            var $searchBar = $('#searchBar'),
+                $searchResult = $('#searchResult'),
+                $searchText = $('#searchText'),
+                $searchInput = $('#searchInput'),
+                $searchClear = $('#searchClear'),
+                $searchCancel = $('#searchCancel');
+
+            function hideSearchResult() {
+                $searchResult.hide();
+                $searchInput.val('');
+            }
+            function cancelSearch() {
+                hideSearchResult();
+                $searchBar.removeClass('weui-search-bar_focusing');
+                $searchText.show();
+            }
+
+            $searchText.on('click', function () {
+                $searchBar.addClass('weui-search-bar_focusing');
+                $searchInput.focus();
+            });
+            $searchInput
+                .on('blur', function () {
+                    if (!this.value.length) cancelSearch();
+                })
+                .on('input', function () {
+                    if (this.value.length) {
+                        $searchResult.show();
+                    } else {
+                        $searchResult.hide();
+                    }
+                })
+                ;
+            $searchClear.on('click', function () {
+                hideSearchResult();
+                $searchInput.focus();
+            });
+            $searchCancel.on('click', function () {
+                cancelSearch();
+                $searchInput.blur();
+            });
+            $('#return').on('click', function () {
+                set_size(window.location.href, "/me.html");
+            })
+            $('#detail').on('click', function () {
+                set_size(window.location.href, "/me/settings/help_detail.html");
+            })
+
+        });
+    </script>
+</body>
+
+</html>

@@ -33,10 +33,10 @@ if (annyang) {
     }
 
     var speech = function () {
-        set_size(window.location.href, "/me.html");
+        set_size(window.location.href, "/me/settings/speech_command.html");
     }
     var help = function () {
-        console.log('help');
+        set_size(window.location.href, "/me/settings/help_center.html");
     }
 
     var commands = {
@@ -51,6 +51,7 @@ if (annyang) {
         // By defining a part of the following command as optional, annyang will respond to both:
         // "say hello to my little friend" as well as "say hello friend"
         'speech': speech,
+        
         'help': help
     };
     // OPTIONAL: activate debug mode for detailed logging in the console
