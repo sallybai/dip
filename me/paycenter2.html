@@ -34,7 +34,7 @@
 <body onload="loaded()" class="paycenter2">
     <div id="header">
         <div class="topbar-wrap flex-pack-justify">
-            <a class="return" href="/me/wallet1.html">
+            <a id="return" class="return" href="javascript:;">
                 <span>
                     <!--add more-->Back
                 </span>
@@ -107,8 +107,14 @@
     <div id="footer">
 
     </div>
+    <script type="text/javascript" src="/js/global.js"></script>
     <script type="text/javascript" class="searchbar js_show">
 
+        $(function () {
+            $("#return").on('click', function () {
+                set_size(window.location.href, "/me/wallet1.html");
+            })
+        })      
     </script>
 </body>
 

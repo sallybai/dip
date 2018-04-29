@@ -16,7 +16,7 @@
         var myScroll;
 
         function loaded() {
-            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true , click: true});
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: true });
 
             /*  document.getElementById('me').addEventListener('tap', function () {
                  this.style.background = !this.style.background ? '#dbdbde' : '';
@@ -58,7 +58,7 @@
                 <div class="weui-panel__bd">
                     <div class="weui-media-box weui-media-box_small-appmsg">
                         <div class="weui-cells">
-                            <a class="weui-cell weui-cell_access list-first" href="/me/wallet1.html">
+                            <a class="weui-cell weui-cell_access list-first" href="javascript:;" id="wallet">
                                 <div class="weui-cell__hd">
                                     <img src="/img/me/ico1.png" alt="" style="width:20px;margin-right:5px;display:block">
                                 </div>
@@ -72,6 +72,86 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="weui-panel">
+                <div class="weui-panel__bd">
+                    <div class="weui-media-box weui-media-box_small-appmsg">
+                        <div class="weui-cells">
+                            <a class="weui-cell weui-cell_access" href="javascript:;" id="settings">
+                                <div class="weui-cell__hd">
+                                    <img src="/img/me/ico6.png" alt="" style="width:20px;margin-right:5px;display:block">
+                                </div>
+                                <div class="weui-cell__bd weui-cell_primary">
+                                    <p>Settings</p>
+                                </div>
+                                <span class="weui-cell__ft"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-panel__bd">
+                    <div class="weui-media-box weui-media-box_small-appmsg">
+                        <div class="weui-cells">
+                            <a class="weui-cell weui-cell_access" href="/me/settings/text_size.html" id="text_size">
+                                <div class="weui-cell__hd">
+                                    <img src="/img/me/ico6.png" alt="" style="width:20px;margin-right:5px;display:block">
+                                </div>
+                                <div class="weui-cell__bd weui-cell_primary">
+                                    <p>Text Size</p>
+                                </div>
+                                <span class="weui-cell__ft"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-panel__bd">
+                    <div class="weui-media-box weui-media-box_small-appmsg">
+                        <div class="weui-cells">
+                            <a class="weui-cell weui-cell_access" href="javascript:;" id="double_check">
+                                <div class="weui-cell__hd">
+                                    <img src="/img/me/ico6.png" alt="" style="width:20px;margin-right:5px;display:block">
+                                </div>
+                                <div class="weui-cell__bd weui-cell_primary">
+                                    <p>Transfer Double Check</p>
+                                </div>
+                                <span class="weui-cell__ft"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-panel__bd">
+                    <div class="weui-media-box weui-media-box_small-appmsg">
+                        <div class="weui-cells">
+                            <a class="weui-cell weui-cell_access" href="javascript:;" id="speech">
+                                <div class="weui-cell__hd">
+                                    <img src="/img/me/ico6.png" alt="" style="width:20px;margin-right:5px;display:block">
+                                </div>
+                                <div class="weui-cell__bd weui-cell_primary">
+                                    <p>Speech Command</p>
+                                </div>
+                                <span class="weui-cell__ft"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-panel__bd">
+                    <div class="weui-media-box weui-media-box_small-appmsg">
+                        <div class="weui-cells">
+                            <a class="weui-cell weui-cell_access" href="javascript:;" id="help">
+                                <div class="weui-cell__hd">
+                                    <img src="/img/me/ico6.png" alt="" style="width:20px;margin-right:5px;display:block">
+                                </div>
+                                <div class="weui-cell__bd weui-cell_primary">
+                                    <p>Help Center</p>
+                                </div>
+                                <span class="weui-cell__ft"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="weui-panel">
                 <div class="weui-panel__bd">
@@ -101,7 +181,7 @@
                 <div class="weui-panel__bd">
                     <div class="weui-media-box weui-media-box_small-appmsg">
                         <div class="weui-cells">
-                            <a class="weui-cell weui-cell_access" href="javascript:;" id="me">
+                            <a class="weui-cell weui-cell_access" href="javascript:;" id="">
                                 <div class="weui-cell__hd">
                                     <img src="/img/me/ico4.png" alt="" style="width:20px;margin-right:5px;display:block">
                                 </div>
@@ -116,7 +196,7 @@
                 <div class="weui-panel__bd">
                     <div class="weui-media-box weui-media-box_small-appmsg">
                         <div class="weui-cells">
-                            <a class="weui-cell weui-cell_access" href="javascript:;" id="me">
+                            <a class="weui-cell weui-cell_access" href="javascript:;" id="">
                                 <div class="weui-cell__hd">
                                     <img src="/img/me/ico5.png" alt="" style="width:20px;margin-right:5px;display:block">
                                 </div>
@@ -129,64 +209,32 @@
                     </div>
                 </div>
             </div>
-
-            <div class="weui-panel">
-                <div class="weui-panel__bd">
-                    <div class="weui-media-box weui-media-box_small-appmsg">
-                        <div class="weui-cells">
-                            <a class="weui-cell weui-cell_access" href="javascript:;" id="me">
-                                <div class="weui-cell__hd">
-                                    <img src="/img/me/ico6.png" alt="" style="width:20px;margin-right:5px;display:block">
-                                </div>
-                                <div class="weui-cell__bd weui-cell_primary">
-                                    <p>Settings</p>
-                                </div>
-                                <span class="weui-cell__ft"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="weui-panel__bd">
-                    <div class="weui-media-box weui-media-box_small-appmsg">
-                        <div class="weui-cells">
-                            <a class="weui-cell weui-cell_access" href="/me/settings/text_size.html" id="me">
-                                <div class="weui-cell__hd">
-                                    <img src="/img/me/ico6.png" alt="" style="width:20px;margin-right:5px;display:block">
-                                </div>
-                                <div class="weui-cell__bd weui-cell_primary">
-                                    <p>Text Size</p>
-                                </div>
-                                <span class="weui-cell__ft"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="weui-panel__bd">
-                    <div class="weui-media-box weui-media-box_small-appmsg">
-                        <div class="weui-cells">
-                            <a class="weui-cell weui-cell_access" href="javascript:;" id="me">
-                                <div class="weui-cell__hd">
-                                    <img src="/img/me/ico6.png" alt="" style="width:20px;margin-right:5px;display:block">
-                                </div>
-                                <div class="weui-cell__bd weui-cell_primary">
-                                    <p>Transfer Double Check</p>
-                                </div>
-                                <span class="weui-cell__ft"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
     </div>
 
     <div id="footer">
 
     </div>
-    <script type="text/javascript" class="searchbar js_show">
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript">
+
         $(function () {
             $("#footer").load("footer.html");
-        });
+            $("#wallet").on('click', function () {
+                set_size(window.location.href, "/me/wallet1.html");
+            })
+            $("#double_check").on('click', function () {
+                set_size(window.location.href, "/me/settings/double_check.html");
+            })
+            $("#speech").on('click', function () {
+                set_size(window.location.href, "/me/settings/speech_command.html");
+            })
+            $("#help").on('click', function () {
+                set_size(window.location.href, "/me/settings/help_center.html");
+            })
+            
+        })      
     </script>
 </body>
 

@@ -34,13 +34,13 @@
 <body onload="loaded()" class="wallet1">
     <div id="header">
         <div class="topbar-wrap flex-pack-justify">
-            <a class="return" href="/me.html">
+            <a id="return" class="return" href="javascript:;">
                 <span>
                     <!--add more-->Me
                 </span>
             </a>
             <h3>Wallet</h3>
-            <a class="set" href="/me/paycenter2.html">
+            <a id="set" class="set" href="javascript:;">
                 <span>
                     <!--add more-->
                 </span>
@@ -211,8 +211,17 @@
         </div>
     </div>
 
-    <script type="text/javascript" class="searchbar js_show">
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript">
 
+        $(function () {
+            $("#set").on('click', function () {
+                set_size(window.location.href, "/me/paycenter2.html");
+            })
+            $("#return").on('click', function () {
+                set_size(window.location.href, "/me.html");
+            })
+        })      
     </script>
 </body>
 

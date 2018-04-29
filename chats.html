@@ -17,7 +17,7 @@
 		var myScroll;
 
 		function loaded() {
-			myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true , click: true});
+			myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: true });
 
 			/*document.getElementById('me').addEventListener('tap', function () {
 				this.style.background = !this.style.background ? '#dbdbde' : '';
@@ -46,7 +46,7 @@
 			<form class="weui-search-bar__form">
 				<div class="weui-search-bar__box">
 					<i class="weui-icon-search"></i>
-					<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+					<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="Search" required="">
 					<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
 				</div>
 				<label class="weui-search-bar__label" id="searchText">
@@ -54,12 +54,23 @@
 					<span>Search</span>
 				</label>
 			</form>
-			<a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+			<a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">Cancel</a>
+		</div>
+
+		<div class="weui-cell weui-cell_switch">
+			<div class="weui-cell__bd">Open Elderly Mode</div>
+			<div class="weui-cell__ft">
+				<label for="switchCP" class="weui-switch-cp">
+					<input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+					<div class="weui-switch-cp__box"></div>
+				</label>
+			</div>
 		</div>
 	</div>
 
 	<div id="wrapper">
-		<div id="scroller"><!-- 
+		<div id="scroller">
+			<!-- 
 			<div class="weui-panel weui-panel_access">
 				<div class="weui-panel__bd">
 					<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
@@ -92,23 +103,16 @@
 				<p class="result">Right or wrong?</p>
 				<p class="output">...diagnostic messages</p>
 			</div> -->
-		
-		
-			<div id="switch" class="weui-cells weui-cells_form">
-				<div class="weui-cell weui-cell_switch">
-					<div class="weui-cell__bd">Open Elderly Mode </div>
-					<div class="weui-cell__ft">
-						<input class="weui-switch" type="checkbox">
-					</div>
-				</div>
-			</div>
+
+
+
 			<ul class="contact">
 				<li>
 					<div class="avatar">
 						<img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg" />
 					</div>
 					<div class="text">
-						<h3>CCAA China</h3>
+						<h3>Sally</h3>
 						<span class="time">11:58 AM</span>
 						<p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p>
 					</div>
@@ -125,7 +129,7 @@
 				</li>
 				<li>
 					<div class="avatar">
-						<img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg" />
+						<img width="100%" height="auto" alt="头像" src="/img/chats/3.jpg" />
 					</div>
 					<div class="text">
 						<h3>CCAA China</h3>
@@ -133,9 +137,9 @@
 						<p>冯夷 - surrey [link]白眼时间红衣女子和蓝衣女子上演大戏</p>
 					</div>
 				</li>
-				<li id="me">
+				<li id="">
 					<div class="avatar">
-						<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/4.jpg">
 					</div>
 					<div class="text">
 						<h3>CCAA China</h3>
@@ -145,7 +149,7 @@
 				</li>
 				<li>
 					<div class="avatar">
-						<img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg" />
+						<img width="100%" height="auto" alt="头像" src="/img/chats/5.jpg" />
 					</div>
 					<div class="text">
 						<h3>CCAA China</h3>
@@ -155,7 +159,7 @@
 				</li>
 				<li>
 					<div class="avatar">
-						<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/6.jpg">
 					</div>
 					<div class="text">
 						<h3>CCAA China</h3>
@@ -165,7 +169,7 @@
 				</li>
 				<li>
 					<div class="avatar">
-						<img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg" />
+						<img width="100%" height="auto" alt="头像" src="/img/chats/7.jpg" />
 					</div>
 					<div class="text">
 						<h3>CCAA China</h3>
@@ -175,7 +179,7 @@
 				</li>
 				<li>
 					<div class="avatar">
-						<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/8.jpg">
 					</div>
 					<div class="text">
 						<h3>CCAA China</h3>
@@ -250,8 +254,14 @@
 	<div id="footer">
 
 	</div>
-	<script type="text/javascript" class="searchbar js_show">
+    <script type="text/javascript" src="/js/global.js"></script>
+	<script type="text/javascript">
 		$(function () {
+			$('.contact li').on('click', function () {
+				console.log('a');
+				set_size(window.location.href, "/chats/conversation.html");
+            
+			});
 			$("#footer").load("footer.html");
 			var $searchBar = $('#searchBar'),
 				$searchResult = $('#searchResult'),
@@ -294,6 +304,10 @@
 				cancelSearch();
 				$searchInput.blur();
 			});
+
+
+
+
 		});
 	</script>
 	<script type="text/javascript" src="/js/speech/script.js"></script>

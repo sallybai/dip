@@ -34,7 +34,7 @@
 <body onload="loaded()" class="text-size">
     <div id="header">
         <div class="topbar-wrap flex-pack-justify">
-            <a class="return" href="/me/wallet1.html">
+            <a class="return" href="javascript:;">
                 <span>
                     <!--add more-->Back
                 </span>
@@ -107,10 +107,12 @@
 
             var totalLen = $('#sliderInner').width(),
                 startLeft = 0,
-                startX = 0;
+                startX = 0,
+                font_size =11;
 
             var elem = $('html')
             var html_size = elem.css('font-size').substring(0,2);
+            console.log(html_size);
             $sliderHandler
                 .on('touchstart', function (e) {
                     startLeft = parseInt($sliderHandler.css('left')) * totalLen / 100;
@@ -126,10 +128,13 @@
                     $sliderValue.text(percent);
                     e.preventDefault();
                     // set font-size
-                    var font_size = 1 + percent / 100;
-                    elem.css({ fontSize: font_size* html_size +'px'})
+                    font_size = (1 + percent / 100-0.25)* html_size;
+                    elem.css({ fontSize: font_size +'px'})
                 });
-
+            
+            $('.return').on('click',function(){
+                window.location.href = "/me.html?text_size="+font_size; 
+            })
 
         });
     </script>

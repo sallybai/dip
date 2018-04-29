@@ -31,64 +31,408 @@
     </script>
 </head>
 
-<body onload="loaded()" class="double-check">
+<body onload="loaded()" class="double-check contacts">
     <div id="header">
-        <div class="topbar-wrap flex-pack-justify">
-            <a class="return" href="/me/wallet1.html">
-                <span>
-                    <!--add more-->Back
-                </span>
-            </a>
-            <h3>Text Size</h3>
+        <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="Search" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>Search</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">Cancel</a>
         </div>
 
     </div>
 
     <div id="wrapper">
-        <div></div>
+        <div id="scroller">
+            <!-- <div class="weui-cells__title">Starred</div> -->
+            <ul class="contact">
+                <li>
+                    <div class="weui-cells_checkbox" id="showIOSDialog1">
+                        <label class="weui-cell weui-check__label" for="s11" id="confirmBtn">
+
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" checked="checked" id="s11" value="黄药师">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>Sally</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" for="s12">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" class="weui-check" name="checkbox1" id="s12" value="黄药师1">
+                                <i class="weui-icon-checked"></i>
+                            </div>
+
+                            <div class="avatar">
+                                <img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+                            </div>
+                            <div class="text">
+                                <h3>CCAA China</h3>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div id="footer">
-        <div class="weui-slider-box">
-            <div class="weui-slider">
-                <div id="sliderInner" class="weui-slider__inner">
-                    <div id="sliderTrack" style="width: 46%;" class="weui-slider__track"></div>
-                    <div id="sliderHandler" style="left: 46%;" class="weui-slider__handler"></div>
+    </div>
+
+    <div class="">
+        <div id="dialogs">
+            <!--BEGIN dialog1-->
+            <div class="js_dialog" id="iosDialog1" style="display: none;">
+
+                <div class="weui-mask weui-animate-fade-in">
+                    <!--laywer-->
+                </div>
+                <div class="weui-dialog weui-animate-fade-in">
+                    <div class="weui-dialog__hd">
+                        <strong class="weui-dialog__title">Double Check:</strong>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                            <img src="/img/chats/1.jpg" style="width: 66px;display: block">
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>Sally</p>
+                            <p>Let Sally confirm after your transfering behavior</p>
+                        </div>
+                    </div>
+                    <div class="weui-dialog__ft">
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">Cancel</a>
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="showToast">OK</a>
+                    </div>
                 </div>
             </div>
-            <div id="sliderValue" class="weui-slider-box__value">46</div>
+            <!--END dialog1-->
         </div>
     </div>
-    <script type="text/javascript" class="searchbar js_show">
+
+
+
+    <!--BEGIN toast-->
+    <div id="toast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+            <p class="weui-toast__content">done</p>
+        </div>
+    </div>
+    <!--end toast-->
+    <!-- <script type="text/javascript" src="/js/speech/script.js"></script> 
+    -->
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript">
 
         $(function () {
-            var $sliderTrack = $('#sliderTrack'),
-                $sliderHandler = $('#sliderHandler'),
-                $sliderValue = $('#sliderValue');
 
-            var totalLen = $('#sliderInner').width(),
-                startLeft = 0,
-                startX = 0;
+            var $searchBar = $('#searchBar'),
+                $searchResult = $('#searchResult'),
+                $searchText = $('#searchText'),
+                $searchInput = $('#searchInput'),
+                $searchClear = $('#searchClear'),
+                $searchCancel = $('#searchCancel');
 
-            $sliderHandler
-                .on('touchstart', function (e) {
-                    startLeft = parseInt($sliderHandler.css('left')) * totalLen / 100;
-                    startX = e.changedTouches[0].clientX;
+            function hideSearchResult() {
+                $searchResult.hide();
+                $searchInput.val('');
+            }
+            function cancelSearch() {
+                hideSearchResult();
+                $searchBar.removeClass('weui-search-bar_focusing');
+                $searchText.show();
+            }
+
+            $searchText.on('click', function () {
+                $searchBar.addClass('weui-search-bar_focusing');
+                $searchInput.focus();
+            });
+            $searchInput
+                .on('blur', function () {
+                    if (!this.value.length) cancelSearch();
                 })
-                .on('touchmove', function (e) {
-                    var dist = startLeft + e.changedTouches[0].clientX - startX,
-                        percent;
-                    dist = dist < 0 ? 0 : dist > totalLen ? totalLen : dist;
-                    percent = parseInt(dist / totalLen * 100);
-                    $sliderTrack.css('width', percent + '%');
-                    $sliderHandler.css('left', percent + '%');
-                    $sliderValue.text(percent);
-
-                    e.preventDefault();
+                .on('input', function () {
+                    if (this.value.length) {
+                        $searchResult.show();
+                    } else {
+                        $searchResult.hide();
+                    }
                 })
                 ;
+            $searchClear.on('click', function () {
+                hideSearchResult();
+                $searchInput.focus();
+            });
+            $searchCancel.on('click', function () {
+                cancelSearch();
+                $searchInput.blur();
+            });
+
+
+
+            var $toast = $('#toast');
+            $('#showToast').on('click', function () {
+                if ($toast.css('display') != 'none') return;
+
+                $toast.fadeIn(1);
+                setTimeout(function () {
+                    $toast.fadeOut(1);
+                }, 2000);
+                set_size(window.location.href, "/me.html");
+        
+            });
+
+            var $iosDialog1 = $('#iosDialog1');
+            $('#dialogs').on('click', '.weui-dialog__btn', function () {
+                $(this).parents('.js_dialog').fadeOut(1);
+            });
+            $('#showIOSDialog1').on('click', function () {
+                $iosDialog1.fadeIn(1);
+            });
+
         });
+
     </script>
+
 </body>
 
 </html>

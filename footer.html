@@ -1,23 +1,23 @@
 <div class="weui-tabbar">
-    <a href="/chats.html" class="weui-tabbar__item weui-bar__item_on">
+    <a href="javascript:;" id="chats" class="weui-tabbar__item weui-bar__item_on">
         <span style="display: inline-block;position: relative;">
             <img src="/img/chats/ico1.png" alt="" class="weui-tabbar__icon">
             <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">...</span>
         </span>
         <p class="weui-tabbar__label">Chats</p>
     </a>
-    <a href="/contacts.html" class="weui-tabbar__item">
+    <a href="javascript:;" id="contacts" class="weui-tabbar__item">
         <img src="/img/chats/ico2.png" alt="" class="weui-tabbar__icon">
         <p class="weui-tabbar__label">Contacts</p>
     </a>
-    <a href="/discover.html" class="weui-tabbar__item">
+    <a href="javascript:;" id="discover" class="weui-tabbar__item">
         <span style="display: inline-block;position: relative;">
             <img src="/img/chats/ico3.png" alt="" class="weui-tabbar__icon">
             <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
         </span>
         <p class="weui-tabbar__label">Discover</p>
     </a>
-    <a href="/me.html" class="weui-tabbar__item">
+    <a href="javascript:;" id="me" class="weui-tabbar__item">
         <span style="display: inline-block;position: relative;">
             <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
             <img src="/img/chats/ico4.png" alt="" class="weui-tabbar__icon">
@@ -25,3 +25,23 @@
         <p class="weui-tabbar__label">Me</p>
     </a>
 </div>
+
+<script type="text/javascript" src="/js/global.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $("#chats").on('click', function () {
+            set_size(window.location.href, "/chats.html");
+        })
+        $("#contacts").on('click', function () {
+            set_size(window.location.href, "/contacts.html");
+        })
+        $("#discover").on('click', function () {
+            set_size(window.location.href, "/discover.html");
+        })
+        $("#me").on('click', function () {
+            set_size(window.location.href, "/me.html");
+        })
+        
+    })      
+</script>

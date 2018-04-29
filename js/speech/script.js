@@ -30,7 +30,7 @@ function testSpeech_1() {
   testBtn.textContent = 'Test in progress';
 
   //var phrase_1 = phrase_1s[randomphrase_1()];
-  var phrase_1 = "transfer money"
+  var phrase_1 = "text"
   //var phrase_2 = "font size"
   //phrase_1Para.textContent = phrase_1;
   //resultPara.textContent = 'Right or wrong?';
@@ -63,10 +63,11 @@ function testSpeech_1() {
     if(speechResult === phrase_1) {
       //resultPara.textContent = 'I heard the correct phrase_1!';
       //resultPara.style.background = 'lime';
-      window.location.href = 'https://127.0.0.1:8080/me/wallet1.html';
+      window.location.href = 'https://127.0.0.1:8080/me/settings/text_size.html';
     } else {
       //resultPara.textContent = 'That didn\'t sound right.';
       //resultPara.style.background = 'red';
+      console.log('error');
     }
 
     console.log('Confidence: ' + event.results[0][0].confidence);
