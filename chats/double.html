@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>WeChat H5</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/weui.min.css">
+    <script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
+    <script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+</head>
+
+<body class="double">
+    <div id="header">
+        <div class="topbar-wrap flex-pack-justify">
+            <a id="return" class="return" href="javascript:;">
+                <span>
+                    <!--add more-->Transfer
+                </span>
+            </a>
+            <h3></h3>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div class="wrap">
+            <div class="avatar">
+                <img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg">
+                <p>Sally</p>
+            </div>
+            <div class="">
+                <p class="title">Transfer amount:
+                    <br />
+                    <span class="digit" id="digit"></span>
+                </p>
+
+                <p class="amount">&yen;
+                    <input type="text" value="" class="input-amount" placeholder="0.00" step="0.01">
+                </p>
+                <div class="weui-cell weui-cell_switch">
+                    <div class="weui-cell__bd">double check open</div>
+                    <div class="weui-cell__ft">
+                        <label for="switchCP" class="weui-switch-cp">
+                            <input id="switchCP" class="weui-switch-cp__input weui_switch" type="checkbox" checked="checked">
+                            <div class="weui-switch-cp__box"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="weui-btn-area">
+                    <a class="weui-btn weui-btn_primary" href="javascript:" id="showIOSDialog1">Transfer</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="">
+        <div id="dialogs">
+            <!--BEGIN dialog1-->
+            <div class="js_dialog" id="iosDialog1" style="display: none;">
+
+                <div class="weui-mask weui-animate-fade-in">
+                    <!--laywer-->
+                </div>
+                <div class="weui-dialog weui-animate-fade-in">
+                    <div class="weui-dialog__hd">
+                        <strong class="weui-dialog__title">Enter Payment Password</strong>
+                    </div>
+                    <p class="title">Pay to Sally (Congmin Bai)</p>
+                    <p class="amount">&yen;100.00</p>
+                    <p class="title">Balance</p>
+                    <p class="amount">
+                        <input type="password" pattern="\d{6}" maxlength="6" value="" required class="input-psw">
+                    </p>
+                    <div class="weui-dialog__ft">
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">Cancel</a>
+                        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary relocate" id="showToast">OK</a>
+                    </div>
+                </div>
+            </div>
+            <!--END dialog1-->
+        </div>
+        <script type="text/javascript" src="/js/global.js"></script>
+        <script type="text/javascript" class="searchbar js_show">
+
+            $(function () {
+
+                var $iosDialog1 = $('#iosDialog1');
+                $('#dialogs').on('click', '.weui-dialog__btn', function () {
+                    $(this).parents('.js_dialog').fadeOut(1);
+                });
+                $('#showIOSDialog1').on('click', function () {
+                    $iosDialog1.fadeIn(1);
+                });
+
+
+
+
+
+
+
+                var $form = $(".amount");
+                var $input = $(".input-amount");
+
+                $input.on("keyup", function (event) {
+
+
+                    // When user select text in the document, also abort.
+                    var selection = window.getSelection().toString();
+                    if (selection !== '') {
+                        return;
+                    }
+
+                    // When the arrow keys are pressed, abort.
+                    if ($.inArray(event.keyCode, [38, 40, 37, 39]) !== -1) {
+                        return;
+                    }
+
+
+                    var $this = $(this);
+
+                    // Get the value.
+                    var input = $this.val();
+
+                    var input = input.replace(/[\D\s\._\-]+/g, "");
+                    input = input ? parseInt(input, 10) : 0;
+
+                    $this.val(function () {
+                        return (input === 0) ? "" : input.toLocaleString("en-US");
+                    });
+                });
+
+                /**
+                 * ==================================
+                 * When Form Submitted
+                 * ==================================
+                 */
+                $form.on("submit", function (event) {
+
+                    var $this = $(this);
+                    var arr = $this.serializeArray();
+
+                    for (var i = 0; i < arr.length; i++) {
+                        arr[i].value = arr[i].value.replace(/[($)\s\._\-]+/g, ''); // Sanitize the values.
+                    };
+
+                    console.log(arr);
+
+                    event.preventDefault();
+                });
+
+                $digit = $('#digit');
+                $input.bind('input propertychange', function () {
+                    var len = $(this).val().length;
+                    if (len == 4 | len == 5) {
+                        $digit.html('1 thousand');
+                    } else if (len == 6) {
+                        $digit.html('10 thousand');
+                    } else if (len == 7) {
+                        $digit.html('100 thousand');
+                    } else if (len == 8 | len == 9) {
+                        $digit.html('1 million');
+                    } else if (len == 10) {
+                        $digit.html('10 million');
+                    } else if (len == 11) {
+                        $digit.html('100 million');
+                    } else if (len == 12 | len == 13) {
+                        $digit.html('1 billion');
+                    } else if (len == 14) {
+                        $digit.html('10 billion');
+                    } else if (len == 15) {
+                        $digit.html('100 billion');
+                    } else if (len == 16 | len == 17) {
+                        $digit.html('1 trillion');
+                    } else if (len > 16) {
+                        $digit.html('exceed the daily transaction amount');
+                    } else {
+                        $digit.html('');
+                    }
+                });
+                var $status = true, $relocate = $('.relocate');
+                $('.weui_switch').change(function (event) {
+                    $status = $(this).is(':checked');
+                });
+                $relocate.on('click', function () {
+                    if ($status) {
+                        set_size(window.location.href, "/chats/result.html");
+
+                    } else {
+                        set_size(window.location.href, "/chats/result_1.html");
+                    }
+                })
+                $("#return").on('click', function () {
+                    set_size(window.location.href, "/chats/conversation.html");
+                })
+            });
+
+        </script>
+</body>
+
+</html>
