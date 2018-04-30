@@ -1029,6 +1029,25 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 .conversation .li-com{width: 88px;height:88px;display:block;position: absolute;top: 165px;left: 99px;}
 
 
+.conversation .weui-cell.pay-wrap:after{content: none;}
+.conversation .weui-cell.pay-wrap.wait-wrap:after{content: "";display: block;width: 70%;height: 100%;background: rgba(255,255,255,0.6);position: absolute;}
+.conversation .weui-cell.pay-wrap{width: 80%;position: relative;left:20%;}
+.conversation .weui-cell.pay-wrap .weui-cell__bd{background: #fa9e3b;color:#fff;padding-bottom: 2rem;position: relative;}
+.conversation .weui-cell.pay-wrap .weui-cell__bd:after{background: #fff;content: "WeChat Transfer";display: block;color:#888;font-size:1.2rem;position: absolute;bottom: 0;line-height: 1.5;width: 100%;margin-left:-1.3rem;text-indent: 1rem;}
+.conversation .weui-cell.pay-wrap .weui-cell__bd:before{border-color: transparent transparent transparent #fa9e3b;}
+.conversation .weui-cell.pay-wrap .text{padding-left: 1rem;}
+
+
+
+.conversation .weui-cell.pay-wrap.left{left: 0;}
+.conversation .weui-cell.pay-wrap.wait-wrap.left:after{left:25%;}
+.conversation .weui-cell.pay-wrap.left .weui-cell__bd:before{    border-color: transparent #fa9e3b transparent transparent;}
+
+.conversation .weui-cell.pay-wrap.check-wrap .weui-cell__bd{background: #0079FF;}
+.conversation .weui-cell.pay-wrap.check-wrap .weui-cell__bd:before{    border-color: transparent transparent transparent #0079FF;}
+
+
+
 /*  double.html
 ------------------------------ */
 .double #wrapper{top:4rem;bottom:0;}
