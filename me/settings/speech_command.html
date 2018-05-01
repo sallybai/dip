@@ -16,7 +16,7 @@
         var myScroll;
 
         function loaded() {
-            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: true });
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: false });
 
             /*  document.getElementById('me').addEventListener('tap', function () {
                  this.style.background = !this.style.background ? '#dbdbde' : '';
@@ -34,15 +34,15 @@
 <body onload="loaded()" class="speech-command">
     <div id="header">
         <div class="topbar-wrap flex-pack-justify">
-            <a class="return" href="javascript:;">
+            <a id="return" class="return" href="javascript:;">
                 <span>
                     <!--add more-->Back
                 </span>
             </a>
-            <h3>Help Center</h3>
+            <h3>Speech Command</h3>
         </div>
 
-        <div class="weui-search-bar" id="searchBar">
+        <!-- <div class="weui-search-bar" id="searchBar">
             <form class="weui-search-bar__form">
                 <div class="weui-search-bar__box">
                     <i class="weui-icon-search"></i>
@@ -55,7 +55,7 @@
                 </label>
             </form>
             <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">Cancel</a>
-        </div>
+        </div> -->
     </div>
 
     <div id="wrapper">
@@ -82,49 +82,49 @@
     <script type="text/javascript" class="searchbar js_show">
 
         $(function () {
-            var $searchBar = $('#searchBar'),
-                $searchResult = $('#searchResult'),
-                $searchText = $('#searchText'),
-                $searchInput = $('#searchInput'),
-                $searchClear = $('#searchClear'),
-                $searchCancel = $('#searchCancel');
+            // var $searchBar = $('#searchBar'),
+            //     $searchResult = $('#searchResult'),
+            //     $searchText = $('#searchText'),
+            //     $searchInput = $('#searchInput'),
+            //     $searchClear = $('#searchClear'),
+            //     $searchCancel = $('#searchCancel');
 
-            function hideSearchResult() {
-                $searchResult.hide();
-                $searchInput.val('');
-            }
-            function cancelSearch() {
-                hideSearchResult();
-                $searchBar.removeClass('weui-search-bar_focusing');
-                $searchText.show();
-            }
+            // function hideSearchResult() {
+            //     $searchResult.hide();
+            //     $searchInput.val('');
+            // }
+            // function cancelSearch() {
+            //     hideSearchResult();
+            //     $searchBar.removeClass('weui-search-bar_focusing');
+            //     $searchText.show();
+            // }
 
-            $searchText.on('click', function () {
-                $searchBar.addClass('weui-search-bar_focusing');
-                $searchInput.focus();
-            });
-            $searchInput
-                .on('blur', function () {
-                    if (!this.value.length) cancelSearch();
-                })
-                .on('input', function () {
-                    if (this.value.length) {
-                        $searchResult.show();
-                    } else {
-                        $searchResult.hide();
-                    }
-                })
-                ;
-            $searchClear.on('click', function () {
-                hideSearchResult();
-                $searchInput.focus();
-            });
-            $searchCancel.on('click', function () {
-                cancelSearch();
-                $searchInput.blur();
-            });
-            $('.return').on('click', function () {
-                window.location.href = "/me.html?text_size=" + font_size;
+            // $searchText.on('click', function () {
+            //     $searchBar.addClass('weui-search-bar_focusing');
+            //     $searchInput.focus();
+            // });
+            // $searchInput
+            //     .on('blur', function () {
+            //         if (!this.value.length) cancelSearch();
+            //     })
+            //     .on('input', function () {
+            //         if (this.value.length) {
+            //             $searchResult.show();
+            //         } else {
+            //             $searchResult.hide();
+            //         }
+            //     })
+            //     ;
+            // $searchClear.on('click', function () {
+            //     hideSearchResult();
+            //     $searchInput.focus();
+            // });
+            // $searchCancel.on('click', function () {
+            //     cancelSearch();
+            //     $searchInput.blur();
+            // });
+            $('#return').on('click', function () {
+                set_size(window.location.href, "/me.html");
             })
 
         });

@@ -16,7 +16,7 @@
         var myScroll;
 
         function loaded() {
-            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: true });
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: false });
 
             /*  document.getElementById('me').addEventListener('tap', function () {
                  this.style.background = !this.style.background ? '#dbdbde' : '';
@@ -45,7 +45,7 @@
     </div>
 
     <div id="wrapper">
-        <div>
+        <div id="scroller">
             <div class="weui-cells">
                 <div class="weui-cell right">
                     <div class="weui-cell__bd">

@@ -41,7 +41,7 @@
             </a>
             <h3>Help Center</h3>
         </div>
-
+<!-- 
         <div class="weui-search-bar" id="searchBar">
             <form class="weui-search-bar__form">
                 <div class="weui-search-bar__box">
@@ -55,7 +55,7 @@
                 </label>
             </form>
             <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">Cancel</a>
-        </div>
+        </div> -->
     </div>
 
     <div id="wrapper">
@@ -82,47 +82,47 @@
     <script type="text/javascript" class="searchbar js_show">
 
         $(function () {
-            var $searchBar = $('#searchBar'),
-                $searchResult = $('#searchResult'),
-                $searchText = $('#searchText'),
-                $searchInput = $('#searchInput'),
-                $searchClear = $('#searchClear'),
-                $searchCancel = $('#searchCancel');
+            // var $searchBar = $('#searchBar'),
+            //     $searchResult = $('#searchResult'),
+            //     $searchText = $('#searchText'),
+            //     $searchInput = $('#searchInput'),
+            //     $searchClear = $('#searchClear'),
+            //     $searchCancel = $('#searchCancel');
 
-            function hideSearchResult() {
-                $searchResult.hide();
-                $searchInput.val('');
-            }
-            function cancelSearch() {
-                hideSearchResult();
-                $searchBar.removeClass('weui-search-bar_focusing');
-                $searchText.show();
-            }
+            // function hideSearchResult() {
+            //     $searchResult.hide();
+            //     $searchInput.val('');
+            // }
+            // function cancelSearch() {
+            //     hideSearchResult();
+            //     $searchBar.removeClass('weui-search-bar_focusing');
+            //     $searchText.show();
+            // }
 
-            $searchText.on('click', function () {
-                $searchBar.addClass('weui-search-bar_focusing');
-                $searchInput.focus();
-            });
-            $searchInput
-                .on('blur', function () {
-                    if (!this.value.length) cancelSearch();
-                })
-                .on('input', function () {
-                    if (this.value.length) {
-                        $searchResult.show();
-                    } else {
-                        $searchResult.hide();
-                    }
-                })
-                ;
-            $searchClear.on('click', function () {
-                hideSearchResult();
-                $searchInput.focus();
-            });
-            $searchCancel.on('click', function () {
-                cancelSearch();
-                $searchInput.blur();
-            });
+            // $searchText.on('click', function () {
+            //     $searchBar.addClass('weui-search-bar_focusing');
+            //     $searchInput.focus();
+            // });
+            // $searchInput
+            //     .on('blur', function () {
+            //         if (!this.value.length) cancelSearch();
+            //     })
+            //     .on('input', function () {
+            //         if (this.value.length) {
+            //             $searchResult.show();
+            //         } else {
+            //             $searchResult.hide();
+            //         }
+            //     })
+            //     ;
+            // $searchClear.on('click', function () {
+            //     hideSearchResult();
+            //     $searchInput.focus();
+            // });
+            // $searchCancel.on('click', function () {
+            //     cancelSearch();
+            //     $searchInput.blur();
+            // });
             $('#return').on('click', function () {
                 set_size(window.location.href, "/me.html");
             })

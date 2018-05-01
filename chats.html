@@ -11,7 +11,6 @@
 	<script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
 	<script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
 	<script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
-	<script type="text/javascript" src="/js/global.js"></script>
 	<script type="text/javascript">
 
 		var myScroll;
@@ -56,7 +55,7 @@
 			<div class="weui-cell__bd">Open Elderly Mode</div>
 			<div class="weui-cell__ft">
 				<label for="switchCP" class="weui-switch-cp">
-					<input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+					<input id="switchCP" class="weui-switch-cp__input" type="checkbox">
 					<div class="weui-switch-cp__box"></div>
 				</label>
 			</div>
@@ -87,7 +86,27 @@
 						<p>I've seen those kind of games go slightly different to that," Knights coach James Ford told BBC Radio York</p>
 					</div>
 				</li>
-				<li>
+				<li id="mom">
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/5.jpg">
+					</div>
+					<div class="text">
+						<h3>Mom</h3>
+						<span class="time">16/3/2018</span>
+						<p>[voice call]</p>
+					</div>
+				</li>
+				<li id="state_1">
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/6.jpg">
+					</div>
+					<div class="text">
+						<h3>Janet</h3>
+						<span class="time">16/3/2018</span>
+						<p>The professionalism of my team, I must applaud that, they stuck to the gameplan and they were pretty ruthless.</p>
+					</div>
+				</li>
+				<li id="state_2">
 					<div class="avatar">
 						<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
 					</div>
@@ -97,7 +116,7 @@
 						<p>Alice - surrey [link] Javid Replaces Rudd as home secretary</p>
 					</div>
 				</li>
-				<li>
+				<li id="state_3">
 					<div class="avatar">
 						<img width="100%" height="auto" alt="头像" src="/img/chats/3.jpg" />
 					</div>
@@ -106,106 +125,77 @@
 						<span class="time">7:58 AM</span>
 						<p>Mark - edinburgh [link] Sainsbury's vows Asda deal will cut prices</p>
 					</div>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/5.jpg" />
-						</div>
-						<div class="text">
-							<h3>Mom</h3>
-							<span class="time">16/3/2018</span>
-							<p>[voice call]</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/6.jpg">
-						</div>
-						<div class="text">
-							<h3>Janet</h3>
-							<span class="time">16/3/2018</span>
-							<p>The professionalism of my team, I must applaud that, they stuck to the gameplan and they were pretty ruthless.</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/7.jpg" />
-						</div>
-						<div class="text">
-							<h3>CCAA China</h3>
-							<span class="time">16/3/2018</span>
-							<p>[sticker]</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/8.jpg">
-						</div>
-						<div class="text">
-							<h3>2018 - Holyrood</h3>
-							<span class="time">7:58 AM</span>
-							<p>Mark - edinburgh [link] Sainsbury's vows Asda deal will cut prices</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
-						</div>
-						<div class="text">
-							<h3>Janet</h3>
-							<span class="time">16/3/2018</span>
-							<p>The professionalism of my team, I must applaud that, they stuck to the gameplan and they were pretty ruthless.</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg" />
-						</div>
-						<div class="text">
-							<h3>CCAA China</h3>
-							<span class="time">16/3/2018</span>
-							<p>Alice - surrey [link] Javid Replaces Rudd as home secretary</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
-						</div>
-						<div class="text">
-							<h3>Mom</h3>
-							<span class="time">16/3/2018</span>
-							<p>[voice call]</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
-						</div>
-						<div class="text">
-							<h3>CCAA China</h3>
-							<span class="time">16/3/2018</span>
-							<p>Alice - surrey [link] Javid Replaces Rudd as home secretary</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg" />
-						</div>
-						<div class="text">
-							<h3>Chris</h3>
-							<span class="time">16/3/2018</span>
-							<p>I've seen those kind of games go slightly different to that," Knights coach James Ford told BBC Radio York</p>
-						</div>
-					</li>
-					<li>
-						<div class="avatar">
-							<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
-						</div>
-						<div class="text">
-							<h3>CCAA China</h3>
-							<span class="time">16/3/2018</span>
-							<p>Alice - surrey [link] Javid Replaces Rudd as home secretary</p>
-						</div>
-					</li>
+				</li>
+				<li id="state_4">
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/6.jpg">
+					</div>
+					<div class="text">
+						<h3>Janet</h3>
+						<span class="time">16/3/2018</span>
+						<p>The professionalism of my team, I must applaud that, they stuck to the gameplan and they were pretty ruthless.</p>
+					</div>
+				</li>
+				<li id="state_5">
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/7.jpg" />
+					</div>
+					<div class="text">
+						<h3>CCAA China</h3>
+						<span class="time">16/3/2018</span>
+						<p>[sticker]</p>
+					</div>
+				</li>
+				<li>
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/8.jpg">
+					</div>
+					<div class="text">
+						<h3>2018 - Holyrood</h3>
+						<span class="time">7:58 AM</span>
+						<p>Mark - edinburgh [link] Sainsbury's vows Asda deal will cut prices</p>
+					</div>
+				</li>
+				<li>
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg" />
+					</div>
+					<div class="text">
+						<h3>CCAA China</h3>
+						<span class="time">16/3/2018</span>
+						<p>Alice - surrey [link] Javid Replaces Rudd as home secretary</p>
+					</div>
+				</li>
+				<li>
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+					</div>
+					<div class="text">
+						<h3>CCAA China</h3>
+						<span class="time">16/3/2018</span>
+						<p>Alice - surrey [link] Javid Replaces Rudd as home secretary</p>
+					</div>
+				</li>
+				<li>
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/1.jpg" />
+					</div>
+					<div class="text">
+						<h3>Chris</h3>
+						<span class="time">16/3/2018</span>
+						<p>I've seen those kind of games go slightly different to that," Knights coach James Ford told BBC Radio York</p>
+					</div>
+				</li>
+				<li>
+					<div class="avatar">
+						<img width="100%" height="auto" alt="头像" src="/img/chats/2.jpg">
+					</div>
+					<div class="text">
+						<h3>CCAA China</h3>
+						<span class="time">16/3/2018</span>
+						<p>Alice - surrey [link] Javid Replaces Rudd as home secretary</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -213,17 +203,114 @@
 	<div id="footer">
 
 	</div>
+
+	<!--BEGIN toast-->
+	<div id="toast" style="display: none;">
+		<div class="weui-mask_transparent"></div>
+		<div class="weui-toast">
+			<i class="weui-icon-success-no-circle weui-icon_toast"></i>
+			<p class="weui-toast__content">Speech Command On</p>
+		</div>
+	</div>
+	<!--end toast-->
+	<script type="text/javascript" src="/js/global.js"></script>
 	<script type="text/javascript">
 		$(function () {
 
 
+			var status = true;
+			$('#switchCP').on('click', function () {
 
+				//console.log('a');
+				var $toast = $('#toast');
+				//console.log("开关1当前状态：" + $(this).val());
+				if ($(this).val() == "off") {
+					status = false;
+					$('html').css({ fontSize: '11px' });
+					//window.location.href = "/chats.html?text_size=16"
+					$(this).val("on");
+					//console.log($(this));
+					//$(this).prop('checked', false);
+					console.log("开关1当前状态：" + $(this).val());
+
+				} else {
+					status = true;
+					$('html').css({ fontSize: '16px' });
+					//if ($toast.css('display') != 'none') return;
+					$toast.fadeIn(1);
+					setTimeout(function () {
+						$toast.fadeOut(1);
+					}, 4000);
+					$(this).val("off");
+					//console.log($(this));
+					//$(this).prop('checked', true);
+					//window.location.href = "/chats.html?text_size=11"
+				}
+			})
 
 			$('#transfer').on('click', function () {
-				set_size(window.location.href, "/chats/conversation.html");
+				if (status) {
+					window.location.href = "/chats/conversation.html?text_size=16";
+				} else {
+					window.location.href = "/chats/conversation.html?text_size=11";
+				}
+			set_size(window.location.href, "/chats/conversation.html");
 			});
 			$('#double_check').on('click', function () {
+				if (status) {
+					window.location.href = "/chats/conversation_3.html?text_size=16";
+				} else {
+					window.location.href = "/chats/conversation_3.html?text_size=11";
+				}
 				set_size(window.location.href, "/chats/conversation_3.html");
+			});
+			$('#mom').on('click', function () {
+				if (status) {
+					window.location.href = "/chats/conversation_4.html?text_size=16";
+				} else {
+					window.location.href = "/chats/conversation_4.html?text_size=11";
+				}
+				set_size(window.location.href, "/chats/conversation_4.html");
+			});
+			$('#state_1').on('click', function () {
+				if (status) {
+					window.location.href = "/chats/conversation_2.html?text_size=16";
+				} else {
+					window.location.href = "/chats/conversation_2.html?text_size=11";
+				}
+				set_size(window.location.href, "/chats/conversation_2.html");
+			});
+			$('#state_2').on('click', function () {
+				if (status) {
+					window.location.href = "/chats/conversation_3.html?text_size=16";
+				} else {
+					window.location.href = "/chats/conversation_3.html?text_size=11";
+				}
+				set_size(window.location.href, "/chats/conversation_3.html");
+			});
+			$('#state_3').on('click', function () {
+				if (status) {
+					window.location.href = "/chats/conversation_4.html?text_size=16";
+				} else {
+					window.location.href = "/chats/conversation_4.html?text_size=11";
+				}
+				set_size(window.location.href, "/chats/conversation_4.html");
+			});
+			$('#state_4').on('click', function () {
+				if (status) {
+					window.location.href = "/chats/conversation_5.html?text_size=16";
+				} else {
+					window.location.href = "/chats/conversation_5.html?text_size=11";
+				}
+				set_size(window.location.href, "/chats/conversation_5.html");
+			});
+			$('#state_5').on('click', function () {
+				if (status) {
+					window.location.href = "/chats/conversation_6.html?text_size=16";
+				} else {
+					window.location.href = "/chats/conversation_6.html?text_size=11";
+				}
+				set_size(window.location.href, "/chats/conversation_6.html");
 			});
 			$("#footer").load("footer.html");
 			var $searchBar = $('#searchBar'),
@@ -267,10 +354,6 @@
 				cancelSearch();
 				$searchInput.blur();
 			});
-
-
-
-
 		});
 	</script>
 	<!-- <script type="text/javascript" src="/js/speech/script.js"></script> -->

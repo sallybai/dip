@@ -16,7 +16,7 @@
         var myScroll;
 
         function loaded() {
-            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: true });
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: false });
 
             /*  document.getElementById('me').addEventListener('tap', function () {
                  this.style.background = !this.style.background ? '#dbdbde' : '';
@@ -45,7 +45,7 @@
     </div>
 
     <div id="wrapper">
-        <div>
+        <div id="scroller">
             <div class="weui-cells">
                 <div class="weui-cell right">
                     <div class="weui-cell__bd">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="weui-cell right pay-wrap">
-                    <div class="weui-cell__bd flex">
+                    <div class="weui-cell__bd flex" id="layer">
                         <div class="logo">
                             <img class="pay" src="/img/chats/pay.jpg" width="46px">
                         </div>
@@ -107,6 +107,9 @@
             })
             $("#transfer").on('click', function () {
                 set_size(window.location.href, "/chats/double.html");
+            })
+            $("#layer").on('click', function () {
+                set_size(window.location.href, "/chats/result_4.html");
             })
             // $wrap.on('blur',function(){
             //     console.log('a');

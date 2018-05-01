@@ -26,14 +26,43 @@
     </a>
 </div>
 
-<script type="text/javascript" src="/js/global.js"></script>
 <script type="text/javascript">
 
     $(function () {
+
+			// var status = false;
+			// $('#switchCP').on('click', function () {
+
+			// 	console.log('a');
+			// 	var $toast = $('#toast');
+			// 	//console.log("开关1当前状态：" + $(this).val());
+			// 	if ($(this).val() == "off") {
+			// 		status = false;
+			// 		$('html').css({ fontSize: '11px' });
+			// 		//window.location.href = "/chats.html?text_size=11"
+			// 		$(this).val("on");
+			// 		//console.log("开关1当前状态：" + $(this).val());
+
+			// 	} else {
+			// 		status = true;
+			// 		$('html').css({ fontSize: '16px' });
+			// 		//if ($toast.css('display') != 'none') return;
+			// 		$toast.fadeIn(1);
+			// 		setTimeout(function () {
+			// 			$toast.fadeOut(1);
+			// 		}, 2000);
+			// 		$(this).val("off");
+			// 	}
+            // })
+            
+            //window.location.href = "/chats.html?text_size=16"
+                    
+            
         $("#chats").on('click', function () {
             set_size(window.location.href, "/chats.html");
         })
         $("#contacts").on('click', function () {
+            //console.log(window.location.href);
             set_size(window.location.href, "/contacts.html");
         })
         $("#discover").on('click', function () {

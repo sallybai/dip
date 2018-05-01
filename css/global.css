@@ -1014,7 +1014,7 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 /* conversation.html
 ------------------------------ */
 .conversation #footer{padding-bottom: 14%;background: url(/img/chats/conversation/foot_bar.jpg) no-repeat; background-size: 100% auto;height: 0;;}
-.conversation #wrapper{bottom:auto;top:4rem;background:#f8f8f8;}
+.conversation #wrapper{bottom:4rem;top:4rem;background:#f8f8f8;}
 .conversation .weui-flex{padding: 1rem 2rem 0;}
 .conversation .big{font-size:3rem;}
 .conversation .small{position: relative;top:2rem;}
@@ -1030,8 +1030,8 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 
 
 .conversation .weui-cell.pay-wrap:after{content: none;}
-.conversation .weui-cell.pay-wrap.wait-wrap:after{content: "";display: block;width: 70%;height: 100%;background: rgba(255,255,255,0.6);position: absolute;}
-.conversation .weui-cell.pay-wrap{width: 80%;position: relative;left:20%;}
+.conversation .weui-cell.pay-wrap.wait-wrap:after,.conversation .weui-cell.pay-wrap .layer{content: "";display: block;width: 80%;height: 100%;background: rgba(255,255,255,0.6);position: absolute;z-index: 9999;}
+.conversation .weui-cell.pay-wrap{width: 85%;position: relative;left:15%;}
 .conversation .weui-cell.pay-wrap .weui-cell__bd{background: #fa9e3b;color:#fff;padding-bottom: 2rem;position: relative;}
 .conversation .weui-cell.pay-wrap .weui-cell__bd:after{background: #fff;content: "WeChat Transfer";display: block;color:#888;font-size:1.2rem;position: absolute;bottom: 0;line-height: 1.5;width: 100%;margin-left:-1.3rem;text-indent: 1rem;}
 .conversation .weui-cell.pay-wrap .weui-cell__bd:before{border-color: transparent transparent transparent #fa9e3b;}
@@ -1039,14 +1039,19 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 
 
 
-.conversation .weui-cell.pay-wrap.left{left: 0;}
-.conversation .weui-cell.pay-wrap.wait-wrap.left:after{left:25%;}
+.conversation .weui-cell.pay-wrap.wait-wrap.left:after,.conversation .weui-cell.pay-wrap .layer{left:5.4rem;}
+.conversation .weui-cell.pay-wrap.right .layer{left: auto;right:5.4rem;}
 .conversation .weui-cell.pay-wrap.left .weui-cell__bd:before{    border-color: transparent #fa9e3b transparent transparent;}
 
 .conversation .weui-cell.pay-wrap.check-wrap .weui-cell__bd{background: #0079FF;}
 .conversation .weui-cell.pay-wrap.check-wrap .weui-cell__bd:before{    border-color: transparent transparent transparent #0079FF;}
 
+.conversation .weui-cell.pay-wrap.check-wrap.left{left:0;}
+.conversation .weui-cell.pay-wrap.check-wrap.left .weui-cell__bd:before{    border-color: transparent #0079FF transparent transparent;}
+d:before{    border-color: transparent #fa9e3b transparent transparent;}
 
+.conversation .weui-cell.pay-wrap.check-wrap.refuse-wrap .weui-cell__bd{background: #ff0000;}
+.conversation .weui-cell.pay-wrap.check-wrap.refuse-wrap .weui-cell__bd:before{    border-color: transparent #ff0000 transparent transparent;}
 
 /*  double.html
 ------------------------------ */
@@ -1067,7 +1072,7 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 ------------------------------ */
 .result #wrapper{top:4rem;bottom:0;background: #fff;}
 .result .logo img{width: 4.5rem; height: auto;left: 50%;top:4rem;position: relative;-webkit-transform:translate3d(-50%, 0, 0);transform:translate3d(-50%, 0, 0);}
-.result .logo p{text-align:center;margin-top: 4rem;margin-bottom:1rem;}
+.result .logo p{text-align:center;margin-top: 3rem;margin-bottom:0rem;}
 .result .logo .green{color: #1aad19;}
 .result .logo .amount{font-size: 3rem;}
 .result .button-sp-area{position:absolute;bottom:4rem;left: 50%;-webkit-transform:translate3d(-50%, 0, 0);transform:translate3d(-50%, 0, 0);padding: 15px 0;width: 60%;}
@@ -1080,6 +1085,10 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 .double-check .weui-dialog__bd{word-break:normal;text-align: left;}
 .double-check .weui-dialog__hd,.double-check .weui-cell,.double-check .weui-dialog__bd{text-align: left;}
 .double-check .weui-cell__bd{font-size: 1.4rem;}
+
+.double-check .weui-cells{margin-top:0;}
+.double-check .avatar,.double-check .text{float: left;}
+.double-check .text{padding: 1rem 0 0 1rem;}
 /*  speech 公共模块
 ------------------------------ */
 .btn-speech{width: 6rem;height: 6rem;background: #fff;position: absolute;z-index: 9999;border-radius: 3rem;right: 0;border: 3px solid #eee;}
@@ -1087,5 +1096,19 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 /*  help_detail.html
 ------------------------------- */
 .help-detail #footer{height: 0;} 
+
+/*  help_center.html
+------------------------------- */
+.help-center #wrapper{top:4.5rem;bottom:0;} 
+.help-center .weui-cells{margin-top:0;}
+
+
+
+/*  speech_command.html
+------------------------------- */
+.speech-command #wrapper{top:4.5rem;bottom:0;} 
+.speech-command .weui-cells{margin-top:0;}
+
+
 
 
