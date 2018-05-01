@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>WeChat H5</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/weui.min.css">
+    <script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
+    <script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+</head>
+
+<body class="result">
+    <div id="header">
+        <div class="topbar-wrap flex-pack-justify">
+            <a id="return" class="return" href="javascript:;">
+                <span>
+                    <!--add more-->Back
+                </span>
+            </a>
+            <h3></h3>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div class="logo">
+            <i class="weui-icon-waiting weui-icon_msg"></i>
+            <!-- <img width="45px" height="auto" src="/img/chats/logo.jpg"> -->
+            <p class="blue">Wait for double check</p>
+            <p>Mom is waiting for transfering money to Tesco</p>
+            <p class="amount">&yen;100.00</p>
+            <div class="button-sp-area">
+                <a href="javascript:;" id="refuse" class="weui-btn weui-btn_plain-default">Refuse</a>
+                <a href="javascript:;" id="confirm" class="weui-btn weui-btn_plain-default">Confirm</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--BEGIN toast-->
+    <div id="toast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+            <p class="weui-toast__content">done</p>
+        </div>
+    </div>
+    <!--end toast-->
+
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript" class="searchbar js_show">
+
+        $(function () {
+            $("#return").on('click', function () {
+                set_size(window.location.href, "/chats/conversation_4.html");
+            })
+            $("#refuse").on('click', function () {
+                set_size(window.location.href, "/chats/conversation_6.html");
+            })
+            $("#confirm").on('click', function () {
+                set_size(window.location.href, "/chats/conversation_5.html");
+            })
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>WeChat H5</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/weui.min.css">
+    <script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
+    <script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+</head>
+
+<body class="result">
+    <div id="header">
+        <div class="topbar-wrap flex-pack-justify">
+            <a id="return" class="return" href="javascript:;">
+                <span>
+                    <!--add more-->Back
+                </span>
+            </a>
+            <h3></h3>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div class="logo">
+            <i class="weui-icon-waiting weui-icon_msg"></i>
+            <!-- <img width="45px" height="auto" src="/img/chats/logo.jpg"> -->
+            <p class="blue">Wait for receipt</p>
+            <p>Await for Winnie to receive the money</p>
+            <p class="amount">&yen;100.00</p>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div class="weui-footer">
+            <p class="weui-footer__text">Transfer time: 2018-04-29 16:34</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript" class="searchbar js_show">
+
+        $(function () {
+            $("#return").on('click', function () {
+                set_size(window.location.href, "/chats.html");
+            })
+        });
+
+    </script>
+</body>
+
+</html>

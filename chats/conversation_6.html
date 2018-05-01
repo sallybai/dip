@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>WeChat H5</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/weui.min.css">
+    <script type="text/javascript" src="/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="/js/iscroll/demoUtils.js"></script>
+    <script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript">
+
+        var myScroll;
+
+        function loaded() {
+            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: false });
+        }
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+            capture: false,
+            passive: false
+        } : false);
+
+    </script>
+</head>
+
+<body onload="loaded()" class="conversation">
+    <div id="header">
+        <div class="topbar-wrap flex-pack-justify">
+            <a id="return" class="return" href="javascript:;">
+                <span>
+                    <!--add more-->WeChat
+                </span>
+            </a>
+            <h3>Chris</h3>
+        </div>
+
+    </div>
+
+    <div id="wrapper">
+        <div id="scroller">
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd" style="position: relative;margin-left: 1rem;">
+                        <img src="/img/chats/5.jpg" style="width: 4rem;display: block">
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p>Hi, my dear, I am learning how to use WeChat recently and I am wondering would you mind doucle checking
+                            my transfer records in case there is anything wrong?</p>
+                    </div>
+                </div>
+                <div class="weui-cell right">
+                    <div class="weui-cell__bd">
+                        <p>Of course, I'd love to. Remember DO NOT transfer money and show you QR code to anyone else~</p>
+                    </div>
+                    <div class="weui-cell__hd" style="position: relative;margin-right: 1rem;">
+                        <img src="/img/me/avatar.png" style="width: 4rem;display: block">
+                    </div>
+                </div>
+                <div class="weui-cell left pay-wrap check-wrap refuse-wrap">
+                    <div class="weui-cell__hd" style="position: relative;margin-right: 1rem;">
+                        <img src="/img/chats/5.jpg" style="width: 4rem;display: block">
+                    </div>
+                    <div id="send" class="weui-cell__bd flex">
+                        <div class="logo">
+                            <img class="pay" src="/img/chats/pay_2.jpg" width="46px">
+                        </div>
+                        <div class="text">
+                            <p>Double Check</p>
+                            <p>&yen; 100.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-cell right pay-wrap check-wrap refuse-wrap">
+                    <div id="receive" class="weui-cell__bd flex">
+                        <div class="logo">
+                            <img class="pay" src="/img/chats/pay_2.jpg" width="46px">
+                        </div>
+                        <div class="text">
+                            <p>Double Check</p>
+                            <p>&yen; 100.00</p>
+                        </div>
+                    </div>
+                    <div class="weui-cell__hd" style="position: relative;margin-right: 1rem;">
+                        <img src="/img/me/avatar.png" style="width: 4rem;display: block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="input-wrap">
+            <input type="text" value="" class="input-conv">
+            <a class="li-6 li-com" id="transfer" href="javascript:;"></a>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript" class="searchbar">
+
+        $(function () {
+            var $input_wrap = $('.input-wrap'),
+                $wrap = $('#wrap'),
+                $footer = $('#footer');
+            $input_wrap.on('click', function () {
+                $input_wrap.css({ 'padding-bottom': '75%' });
+                $footer.css({ 'padding-bottom': '75%' })
+            });
+
+            $("#return").on('click', function () {
+                set_size(window.location.href, "/chats.html");
+            })
+            $("#receive").on('click', function () {
+                set_size(window.location.href, "/chats/result_3.html");
+            })
+            $("#send").on('click', function () {
+                set_size(window.location.href, "/chats/result_3.html");
+            })
+            // $("#transfer").on('click', function () {
+            //     set_size(window.location.href, "/chats/double.html");
+            // })
+            // $("#mom").on('click', function () {
+            //     //console.log('a');
+            //     set_size(window.location.href, "/chats/result_2.html");
+            // })
+            // $wrap.on('blur',function(){
+            //     console.log('a');
+            // })
+        });
+    </script>
+</body>
+
+</html>
