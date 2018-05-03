@@ -936,8 +936,7 @@ body,html{height:100%;-webkit-tap-highlight-color:transparent}body{font-family:-
 
 /* discover.html & me.html  & paycenter2.html 
 ------------------------------ */
-.discover #wrapper,.me #wrapper,.paycenter2 #wrapper,.cards1 #wrapper,
-.double-check #wrapper{top:5rem;}
+.discover #wrapper,.me #wrapper,.paycenter2 #wrapper,.cards1 #wrapper{top:5rem;}
 .double-check #wrapper{bottom:0;}
 
 /* me.html
@@ -1050,8 +1049,8 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 .conversation .weui-cell.pay-wrap.check-wrap.left .weui-cell__bd:before{    border-color: transparent #0079FF transparent transparent;}
 d:before{    border-color: transparent #fa9e3b transparent transparent;}
 
-.conversation .weui-cell.pay-wrap.check-wrap.refuse-wrap .weui-cell__bd{background: #ff0000;}
-.conversation .weui-cell.pay-wrap.check-wrap.refuse-wrap .weui-cell__bd:before{    border-color: transparent #ff0000 transparent transparent;}
+.conversation .weui-cell.pay-wrap.check-wrap.refuse-wrap .weui-cell__bd{background: #f56363;}
+.conversation .weui-cell.pay-wrap.check-wrap.refuse-wrap .weui-cell__bd:before{    border-color: transparent #f56363 transparent transparent;}
 
 /*  double.html
 ------------------------------ */
@@ -1086,6 +1085,7 @@ d:before{    border-color: transparent #fa9e3b transparent transparent;}
 .double-check .weui-dialog__hd,.double-check .weui-cell,.double-check .weui-dialog__bd{text-align: left;}
 .double-check .weui-cell__bd{font-size: 1.4rem;}
 
+.double-check.contacts .topbar-wrap a{background: none;}
 .double-check .weui-cells{margin-top:0;}
 .double-check .avatar,.double-check .text{float: left;}
 .double-check .text{padding: 1rem 0 0 1rem;}
@@ -1095,6 +1095,7 @@ d:before{    border-color: transparent #fa9e3b transparent transparent;}
 
 /*  help_detail.html
 ------------------------------- */
+.help-detail #wrapper{top: 4.5rem;} 
 .help-detail #footer{height: 0;} 
 
 /*  help_center.html
@@ -1111,4 +1112,8 @@ d:before{    border-color: transparent #fa9e3b transparent transparent;}
 
 
 
+/*  speech_detail.html
+------------------------------- */
+.speech-detail #wrapper{top:4.5rem;bottom:0;}
 
+#scroller .hot-map,.hot-map{background-color: rgba(255,156,156,0.2)}

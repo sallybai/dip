@@ -13,119 +13,122 @@
     <script type="text/javascript" src="/js/zepto/zepto.min.js"></script>
     <script type="text/javascript">
 
-        var myScroll;
-
-        function loaded() {
-            myScroll = new IScroll('#wrapper', { mouseWheel: true, tap: true, click: false });
-
-            /*  document.getElementById('me').addEventListener('tap', function () {
-                 this.style.background = !this.style.background ? '#dbdbde' : '';
-             }, false); */
-        }
-
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
-            capture: false,
-            passive: false
-        } : false);
-
     </script>
 </head>
 
-<body onload="loaded()" class="speech-command">
+<body class="speech-command">
     <div id="header">
         <div class="topbar-wrap flex-pack-justify">
             <a id="return" class="return" href="javascript:;">
                 <span>
-                    <!--add more-->Back
+                    <!--add more-->Save
                 </span>
             </a>
             <h3>Speech Command</h3>
         </div>
-
-        <!-- <div class="weui-search-bar" id="searchBar">
-            <form class="weui-search-bar__form">
-                <div class="weui-search-bar__box">
-                    <i class="weui-icon-search"></i>
-                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="Search" required="">
-                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
-                </div>
-                <label class="weui-search-bar__label" id="searchText">
-                    <i class="weui-icon-search"></i>
-                    <span>Search</span>
-                </label>
-            </form>
-            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">Cancel</a>
-        </div> -->
     </div>
 
     <div id="wrapper">
         <div>
+
+            <div class="weui-cells__title">Settings</div>
             <div class="weui-cells">
-                <div class="weui-cell">
-                    <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-                        <img src="/img/me/ico1.png" style="width: 50px;display: block">
+                <div class="weui-cell weui-cell_switch">
+                    <div class="weui-cell__bd">Open Speech Command</div>
+                    <div class="weui-cell__ft">
+                        <label for="switchCP" class="weui-switch-cp">
+                            <input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+                            <div class="weui-switch-cp__box"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_select weui-cell_select-after">
+                    <div class="weui-cell__hd">
+                        <label for="" class="weui-label">Language</label>
                     </div>
                     <div class="weui-cell__bd">
-                        <p>联系人名称</p>
-                        <p style="font-size: 13px;color: #888888;">摘要信息</p>
+                        <select class="weui-select" name="select2">
+                            <option value="1">English</option>
+                            <option value="2">French</option>
+                            <option value="3">Italian</option>
+                        </select>
                     </div>
                 </div>
             </div>
-
+            <div class="weui-cells__title">Commands</div>
+            <div class="weui-cells" id="speech_text">
+                <a class="weui-cell weui-cell_access" href="javascript:;">
+                    <div class="weui-cell__bd">
+                        <p>set text size</p>
+                    </div>
+                    <div class="weui-cell__ft">text size</div>
+                </a>
+                <a class="weui-cell weui-cell_access" href="javascript:;">
+                    <div class="weui-cell__bd">
+                        <p>double check transfer</p>
+                    </div>
+                    <div class="weui-cell__ft">check</div>
+                </a>
+                <a class="weui-cell weui-cell_access" href="javascript:;">
+                    <div class="weui-cell__bd">
+                        <p>edit speech command</p>
+                    </div>
+                    <div class="weui-cell__ft">speech</div>
+                </a>
+                <a class="weui-cell weui-cell_access" href="javascript:;">
+                    <div class="weui-cell__bd">
+                        <p>help center</p>
+                    </div>
+                    <div class="weui-cell__ft">help</div>
+                </a>
+            </div>
+            <div class="weui-btn-area">
+                <a href="javascript:;" class="weui-btn weui-btn_primary" id="add">Add Command</a>
+            </div>
         </div>
     </div>
 
     <div id="footer">
 
     </div>
+    <!-- <div class="">
+        <div class="weui-mask weui-animate-fade-in"></div>
+        <div class="weui-picker weui-animate-slide-up">
+            <div class="weui-picker__hd">
+                <a href="javascript:;" data-action="cancel" class="weui-picker__action">Cancel</a>
+                <a href="javascript:;" data-action="select" class="weui-picker__action" id="weui-picker-confirm">OK</a>
+            </div>
+            <div class="weui-picker__bd">
+                <div class="weui-picker__group">
+                    <div class="weui-picker__mask"></div>
+                    <div class="weui-picker__indicator"></div>
+                    <div class="weui-picker__content" style="transform: translate3d(0px, 34px, 0px);">
+                        <div class="weui-picker__item">English</div>
+                        <div class="weui-picker__item">Chinese</div>
+                        <div class="weui-picker__item">Franch</div>
+                        <div class="weui-picker__item">Italian</div>
+                        <div class="weui-picker__item">German</div>
+                        <div class="weui-picker__item">Latin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <script type="text/javascript" src="/js/global.js"></script>
     <script type="text/javascript" class="searchbar js_show">
 
         $(function () {
-            // var $searchBar = $('#searchBar'),
-            //     $searchResult = $('#searchResult'),
-            //     $searchText = $('#searchText'),
-            //     $searchInput = $('#searchInput'),
-            //     $searchClear = $('#searchClear'),
-            //     $searchCancel = $('#searchCancel');
-
-            // function hideSearchResult() {
-            //     $searchResult.hide();
-            //     $searchInput.val('');
-            // }
-            // function cancelSearch() {
-            //     hideSearchResult();
-            //     $searchBar.removeClass('weui-search-bar_focusing');
-            //     $searchText.show();
-            // }
-
-            // $searchText.on('click', function () {
-            //     $searchBar.addClass('weui-search-bar_focusing');
-            //     $searchInput.focus();
-            // });
-            // $searchInput
-            //     .on('blur', function () {
-            //         if (!this.value.length) cancelSearch();
-            //     })
-            //     .on('input', function () {
-            //         if (this.value.length) {
-            //             $searchResult.show();
-            //         } else {
-            //             $searchResult.hide();
-            //         }
-            //     })
-            //     ;
-            // $searchClear.on('click', function () {
-            //     hideSearchResult();
-            //     $searchInput.focus();
-            // });
-            // $searchCancel.on('click', function () {
-            //     cancelSearch();
-            //     $searchInput.blur();
-            // });
             $('#return').on('click', function () {
                 set_size(window.location.href, "/me.html");
             })
+            $('#speech_text').on('click', function () {
+                set_size(window.location.href, "/me/settings/speech_text.html");
+            })
+
+            $('#add').on('click', function () {
+                set_size(window.location.href, "/me/settings/speech_text_1.html");
+            })
+
 
         });
     </script>

@@ -10,7 +10,7 @@
 var set_size = function (href, url) {
     //console.log(href);
     var font_size = href.split("=")[1];
-    console.log(font_size);
+    //console.log(font_size);
     $('html').css({ fontSize: font_size + 'px' })
     window.location.href = url + "?text_size=" + font_size;
 }
@@ -45,9 +45,11 @@ $(function () {
         var commands = {
             // annyang will capture anything after a splat (*) and pass it to the function.
             // e.g. saying "Show me Batman and Robin" is the same as calling showFlickr('Batman and Robin');
+            //'Ciao':size
             'font': size,
             'size': size,
             'text': size,
+            'text size': size,
 
             // A named variable is a one word variable, that can fit anywhere in your command.
             // e.g. saying "calculate October stats" will call calculateStats('October');
@@ -67,7 +69,7 @@ $(function () {
         // OPTIONAL: Set a language for speech recognition (defaults to English)
         // For a full list of language codes, see the documentation:
         // https://github.com/TalAter/annyang/blob/master/docs/FAQ.md#what-languages-are-supported
-        annyang.setLanguage('en');
+        annyang.setLanguage('it-IT');
 
         // Start listening. You can call this here, or attach this call to an event, button, etc.
 

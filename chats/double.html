@@ -44,7 +44,7 @@
                 <p class="amount">&yen;
                     <input type="text" value="" class="input-amount" placeholder="0.00" step="0.01">
                 </p>
-                <div class="weui-cell weui-cell_switch">
+                <div class="weui-cell weui-cell_switch hot-map">
                     <div class="weui-cell__bd">double check open</div>
                     <div class="weui-cell__ft">
                         <label for="switchCP" class="weui-switch-cp">
@@ -92,12 +92,17 @@
 
             $(function () {
 
+                var $form = $(".amount"),
+                    $input = $(".input-amount"),
+                    $input_psw = $('.input-psw');
+
                 var $iosDialog1 = $('#iosDialog1');
                 $('#dialogs').on('click', '.weui-dialog__btn', function () {
                     $(this).parents('.js_dialog').fadeOut(1);
                 });
                 $('#showIOSDialog1').on('click', function () {
                     $iosDialog1.fadeIn(1);
+                    $input_psw.focus();
                 });
 
 
@@ -105,10 +110,7 @@
 
 
 
-
-                var $form = $(".amount");
-                var $input = $(".input-amount");
-
+                $input.focus();
                 $input.on("keyup", function (event) {
 
 

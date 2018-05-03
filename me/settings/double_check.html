@@ -33,6 +33,14 @@
 
 <body onload="loaded()" class="double-check contacts">
     <div id="header">
+            <div class="topbar-wrap flex-pack-justify">
+                <a id="return" class="return" href="javascript:;">
+                    <span>
+                        <!--add more-->Back
+                    </span>
+                </a>
+                <h3>Double Checkd</h3>
+            </div>
         <div class="weui-search-bar" id="searchBar">
             <form class="weui-search-bar__form">
                 <div class="weui-search-bar__box">
@@ -53,7 +61,7 @@
     <div id="wrapper">
         <div id="scroller">
             <div class="weui-cells weui-cells_radio" id="showIOSDialog1">
-                <label class="weui-cell weui-check__label" for="x11">
+                <label class="weui-cell weui-check__label hot-map" for="x11">
                     <div class="weui-cell__bd">
                         <div class="avatar">
                             <img width="100%" height="auto" alt="头像" src="/img/chats/4.jpg">
@@ -165,7 +173,7 @@
                         <span class="weui-icon-checked"></span>
                     </div>
                 </label>
-                <label class="weui-cell weui-check__label" for="x19">
+                <label class="weui-cell weui-check__label hot-map" for="x19">
                     <div class="weui-cell__bd">
                         <div class="avatar">
                             <img width="100%" height="auto" alt="头像" src="/img/chats/4.jpg">
@@ -264,6 +272,9 @@
 
         $(function () {
 
+            $('#return').on('click', function () {
+                set_size(window.location.href, "/me.html");
+            })
             var $searchBar = $('#searchBar'),
                 $searchResult = $('#searchResult'),
                 $searchText = $('#searchText'),
