@@ -31,41 +31,26 @@
 
     <div id="wrapper">
         <div class="logo">
-            <i class="weui-icon-waiting weui-icon_msg"></i>
+            <i class="weui-icon-warn weui-icon_msg"></i>
             <!-- <img width="45px" height="auto" src="/img/chats/logo.jpg"> -->
-            <p class="blue">Wait for double check</p>
-            <p>Mom is waiting for transfering money to Tesco</p>
+            <p class="blue">Fail to transfer</p>
+            <p>Transferring has been rejected by double checker</p>
             <p class="amount">&yen;1,000.00</p>
-            <div class="button-sp-area">
-                <a href="javascript:;" id="refuse" class="weui-btn weui-btn_plain-default">Refuse</a>
-                <a href="javascript:;" id="confirm" class="weui-btn weui-btn_plain-default">Confirm</a>
-            </div>
         </div>
 
     </div>
-
-    <!--BEGIN toast-->
-    <div id="toast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
-            <p class="weui-toast__content">done</p>
+    <div id="footer">
+        <div class="weui-footer">
+            <p class="weui-footer__text">Transfer time: 2018-04-29 16:34</p>
         </div>
     </div>
-    <!--end toast-->
 
     <script type="text/javascript" src="/js/global.js"></script>
     <script type="text/javascript" class="searchbar js_show">
 
         $(function () {
             $("#return").on('click', function () {
-                set_size(window.location.href, "/chats/conversation_4.html");
-            })
-            $("#refuse").on('click', function () {
-                set_size(window.location.href, "/chats/conversation_6.html");
-            })
-            $("#confirm").on('click', function () {
-                set_size(window.location.href, "/chats/conversation_5.html");
+                set_size(window.location.href, "/chats.html");
             })
         });
 

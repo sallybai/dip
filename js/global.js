@@ -41,6 +41,10 @@ $(function () {
         var help = function () {
             set_size(window.location.href, "/me/settings/help_center.html");
         }
+        var bind = function () {
+            console.log('a');
+            set_size(window.location.href, "/me/me_cards/cards1.html");
+        }
 
         var commands = {
             // annyang will capture anything after a splat (*) and pass it to the function.
@@ -58,7 +62,8 @@ $(function () {
             // By defining a part of the following command as optional, annyang will respond to both:
             // "say hello to my little friend" as well as "say hello friend"
             'speech': speech,
-            'help': help
+            'help': help,
+            'card': bind
         };
         // OPTIONAL: activate debug mode for detailed logging in the console
         annyang.debug();

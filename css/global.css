@@ -1012,7 +1012,7 @@ background-repeat: no-repeat;background-position:1.5rem 50%;background-size: aut
 
 /* conversation.html
 ------------------------------ */
-.conversation #footer{padding-bottom: 14%;background: url(/img/chats/conversation/foot_bar.jpg) no-repeat; background-size: 100% auto;height: 0;;}
+.conversation #footer{padding-bottom: 14%;background: url(/img/chats/conversation/foot_bar1.jpg) no-repeat; background-size: 100% auto;height: 0;;}
 .conversation #wrapper{bottom:4rem;top:4rem;background:#f8f8f8;}
 .conversation .weui-flex{padding: 1rem 2rem 0;}
 .conversation .big{font-size:3rem;}
@@ -1095,7 +1095,7 @@ d:before{    border-color: transparent #fa9e3b transparent transparent;}
 
 /*  help_detail.html
 ------------------------------- */
-.help-detail #wrapper{top: 4.5rem;} 
+.help-detail #wrapper{top: 4.5rem;bottom:0;} 
 .help-detail #footer{height: 0;} 
 
 /*  help_center.html
@@ -1116,4 +1116,12 @@ d:before{    border-color: transparent #fa9e3b transparent transparent;}
 ------------------------------- */
 .speech-detail #wrapper{top:4.5rem;bottom:0;}
 
-#scroller .hot-map,.hot-map{background-color: rgba(255,156,156,0.2)}
+#scroller .hot-map,.hot-map{background-color: rgba(255,156,156,0.2)} 
+.conversation .weui-cell.pay-wrap .layer:after{background-color: rgba(255,156,156,0.2);content: "";display: block;width: 100%;height: 100%;}
+
+
+
+
+
+
+
